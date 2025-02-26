@@ -20,31 +20,31 @@
 </head>
 <body>
 
-    <h2>Enter the password to see the secret message:</h2>
+    <h2>Enter the password to see something cute:</h2>
     
     <!-- Password input field -->
     <input type="password" id="password" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
 
-    <!-- Hidden message to show when the correct password is entered -->
+    <!-- Hidden message that will appear when the correct password is entered -->
     <div id="secret-message">
         <p>Congratulations! You have unlocked the secret message!</p>
     </div>
 
     <script>
-        // The correct password
-        const correctPassword = "7190590"; // You can change this to whatever you want
+        // Set the correct password here
+        const correctPassword = "7190590"; // Change this to whatever password you want
 
-        // Function to check the entered password
         function checkPassword() {
-            const enteredPassword = document.getElementById("password").value; // Get the entered password
+            // Get the password entered by the user
+            const enteredPassword = document.getElementById("password").value;
             
             // Check if the entered password matches the correct password
             if (enteredPassword === correctPassword) {
-                // Display the secret message if the password is correct
-                document.getElementById("Happy late birthday to my favorite latkho in the world! I'M SO HAPPY YOU'RE BACK (obviously you're not now but inshallah you'll be soon). I Love you and I'm proud of you ALWAYS <3 . ").style.display = "block";
+                // If the password is correct, show the secret message
+                document.getElementById("Happy late birthday to my favorite latkho in the world! I'M SO HAPPY YOU'RE BACK, I love you and i'm proud of you ALWAYS").style.display = "block";
             } else {
-                // Alert if the password is incorrect
+                // If the password is incorrect, show an alert
                 alert("Incorrect password! Please try again.");
             }
         }
