@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <h2>Enter the password to see something cute:</h2>
+    <h2>Enter the password to see the secret message:</h2>
     
     <!-- Password input field -->
     <input type="password" id="password" placeholder="Enter password">
@@ -33,17 +33,20 @@
 
     <script>
         // Set the correct password here
-        const correctPassword = "7190590"; // Change this to whatever password you want
+        const correctPassword = "mySecret123"; // Change this to your desired password
 
         function checkPassword() {
             // Get the password entered by the user
             const enteredPassword = document.getElementById("password").value;
-            
+            console.log("Entered Password: ", enteredPassword); // For debugging
+
             // Check if the entered password matches the correct password
             if (enteredPassword === correctPassword) {
+                console.log("Password correct!"); // For debugging
                 // If the password is correct, show the secret message
-                document.getElementById("Happy late birthday to my favorite latkho in the world! I'M SO HAPPY YOU'RE BACK, I love you and i'm proud of you ALWAYS").style.display = "block";
+                document.getElementById("secret-message").style.display = "block";
             } else {
+                console.log("Password incorrect!"); // For debugging
                 // If the password is incorrect, show an alert
                 alert("Incorrect password! Please try again.");
             }
